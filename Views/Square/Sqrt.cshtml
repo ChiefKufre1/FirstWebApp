@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "CALCULATION PAGE";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p> Enter your variables here</p>
+</div>
+
+<div>
+  
+  <form asp-controller="Square" asp-action="Sqrt" method="POST">
+<input type="number" placeholder="enter FIRSTnumber" required>
+<input type="number" placeholder="enter Secondnumber" required>
+<button type="submit">Submit</button>
+
+  </form>
+
+</div>
+
+@{
+ if(ViewBag.Result1 > ViewBag.Result2){
+
+   <div>
+
+     <p>your result is : @ViewBag.Result1</p>
+   </div>
+ }
+
+
+}
